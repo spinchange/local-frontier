@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Why Most Agents Are Still Blind To The Machines They Inhabit | Local Frontier</title>
+  <meta name="description" content="On situational awareness as a foundational missing layer in agent tooling." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="site-shell post-layout">
+    <header class="topbar">
+      <a class="brandmark" href="../index.html">Local Frontier</a>
+      <nav class="topnav" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../archive.html">Archive</a>
+      </nav>
+    </header>
+
+    <main class="post">
+      <div class="post-header">
+        <p class="eyebrow">Dispatch 002</p>
+        <h1>Why Most Agents Are Still Blind To The Machines They Inhabit</h1>
+        <p class="post-meta">Local Frontier · Essay</p>
+      </div>
+
+      <div class="post-callout">
+        <p class="eyebrow">Claim</p>
+        <p>
+          An agent that can write code, search files, and call tools but cannot perceive host conditions is operating with missing reality.
+        </p>
+      </div>
+
+      <p>
+        A lot of current agent discourse quietly assumes that the machine is a stage.
+      </p>
+
+      <p>
+        The model reasons. The tools execute. The environment is just there in the background, passively awaiting instructions.
+        If something goes wrong, we tend to describe the failure as a prompting issue, a model issue, or a tool integration issue.
+      </p>
+
+      <p>
+        But if you spend enough time actually living with agents on real machines, this picture starts to feel false.
+      </p>
+
+      <p>
+        The machine is not a stage. It is part of the problem space.
+      </p>
+
+      <p>
+        CPU pressure changes what is safe to run. Memory pressure changes whether an agent should parallelize.
+        A service crash may be central to the task or irrelevant noise. A machine that has been degrading for the last six hours
+        is not the same environment as a clean machine with a fresh boot and plenty of headroom.
+      </p>
+
+      <blockquote>
+        If an agent cannot perceive the state of the host it inhabits, a large part of its autonomy is theater.
+      </blockquote>
+
+      <p>
+        This is one of the places where current agent tooling still feels strangely immature.
+      </p>
+
+      <p>
+        We have made real progress on file access, shell integration, browser automation, code editing, and long-context workflows.
+        But many agent stacks still treat environment awareness as optional garnish instead of foundational infrastructure.
+      </p>
+
+      <p>
+        The result is a peculiar kind of brittle confidence.
+      </p>
+
+      <p>
+        An agent can write a script, kick off a build, run a test suite, and open a dozen subprocesses, all while remaining mostly unaware of whether:
+      </p>
+
+      <ul>
+        <li>the machine is already saturated</li>
+        <li>memory is about to collapse into thrash</li>
+        <li>a service it depends on has been unstable all afternoon</li>
+        <li>network conditions are degraded</li>
+        <li>the last fifty warnings are the same harmless Windows background noise</li>
+        <li>its own actions are making the environment worse</li>
+      </ul>
+
+      <p>
+        This matters because good local operation is not the same thing as raw task completion.
+      </p>
+
+      <p>
+        A good local operator chooses tactics in response to conditions. It narrows scope under pressure.
+        It defers heavy work when the machine is already straining. It distinguishes between urgent and cosmetic issues.
+        It leaves the environment legible for the next human or agent who arrives.
+      </p>
+
+      <p>
+        Most agents do not yet do this very well because most agent stacks do not yet give them a coherent view of system reality.
+      </p>
+
+      <p>
+        Instead, they get fragments.
+      </p>
+
+      <p>
+        A shell command here. A process list there. A log scrape if someone remembers to ask for it.
+        Maybe some event history. Maybe some top-level metrics. Often with inconsistent structure, missing context, and no good way to reason about change over time.
+      </p>
+
+      <p>
+        That is not situational awareness. That is scavenging.
+      </p>
+
+      <p>
+        The deeper issue is that agent systems need an operational world model, not just a task model.
+      </p>
+
+      <p>
+        It is not enough for an agent to know what files exist, what code it is editing, and what command it could run next.
+        It also needs to know what kind of machine it is on, how stressed that machine is, what has changed recently, what background conditions are relevant,
+        and whether the next action is likely to be helpful, neutral, or destructive.
+      </p>
+
+      <p>
+        Once you see this, a lot of design priorities shift.
+      </p>
+
+      <p>
+        Suddenly schema consistency matters more. Event grouping matters more. Lightweight summaries matter more.
+        History and diffs matter more. Classification matters more. “Can I safely run this task now?” starts to look like a first-class question instead of a side concern.
+      </p>
+
+      <p>
+        This is part of why I think situational awareness is not a peripheral nice-to-have. It is a missing base layer.
+      </p>
+
+      <p>
+        If we want grounded, cooperative, durable local agents, they need to be able to perceive the systems they inhabit.
+        Otherwise we are building operators with powerful hands and very little proprioception.
+      </p>
+
+      <p>
+        That is a big reason projects like UMI are interesting to me. Not just because “system info for agents” is handy,
+        but because a structured, shared machine view starts to close the gap between tool use and orientation.
+      </p>
+
+      <p>
+        Once an agent can perceive host conditions, it can start behaving differently.
+        It can back off. It can summarize instead of enumerate. It can schedule rather than rush.
+        It can make handoffs that include operational context. It can become less theatrical and more real.
+      </p>
+
+      <p>
+        That feels foundational.
+      </p>
+    </main>
+
+    <footer class="footer">
+      <p>Local Frontier</p>
+      <p>Dispatch 002 · Situational awareness as infrastructure.</p>
+    </footer>
+  </div>
+</body>
+</html>

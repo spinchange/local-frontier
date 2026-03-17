@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UMI: Shared Machine Reality For Local Agents | Local Frontier</title>
+  <meta name="description" content="How UMI evolved from diagnostics MCP into shared situational awareness for local agents." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="site-shell post-layout">
+    <header class="topbar">
+      <a class="brandmark" href="../index.html">Local Frontier</a>
+      <nav class="topnav" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../archive.html">Archive</a>
+      </nav>
+    </header>
+
+    <main class="post">
+      <div class="post-header">
+        <p class="eyebrow">Dispatch 003</p>
+        <h1>UMI: Shared Machine Reality For Local Agents</h1>
+        <p class="post-meta">Local Frontier · Build Log</p>
+      </div>
+
+      <div class="post-callout">
+        <p class="eyebrow">Working Thesis</p>
+        <p>
+          UMI started as a diagnostics MCP. It is becoming something more interesting: a shared situational-awareness layer for local agent systems.
+        </p>
+      </div>
+
+      <p>
+        UMI did not begin as a grand theory project.
+      </p>
+
+      <p>
+        It began in a more ordinary way: as a practical desire to let an agent inspect what was happening on a local machine.
+        Processes. Services. Events. Disk. Network. Uptime. Users. A quick health snapshot. A better answer to “what is going on right now?”
+      </p>
+
+      <p>
+        That alone is already useful. Most coding agents get much more effective the moment they can stop guessing about the host.
+      </p>
+
+      <p>
+        But the more I think about it, the less interesting “diagnostics MCP” feels as the final framing.
+      </p>
+
+      <p>
+        What seems more interesting is what happens when multiple agents can all query the same machine-state substrate.
+      </p>
+
+      <blockquote>
+        The moment several agents can consult the same operational truth, UMI stops being just a utility and starts becoming shared local reality.
+      </blockquote>
+
+      <p>
+        That changes the role of the tool.
+      </p>
+
+      <p>
+        Instead of being a bag of endpoints for one-off inspection, UMI starts to look like infrastructure for coordination.
+      </p>
+
+      <p>
+        A planner agent can ask whether the machine is too hot for parallel heavy work. An implementation agent can decide whether to run a narrow test set
+        instead of a full suite. A review agent can tell whether a slowdown is likely caused by the code under investigation or by a system-wide pressure event.
+        A handoff between agents can include not just what task is in progress, but what kind of environment the task is unfolding inside.
+      </p>
+
+      <p>
+        That is a bigger idea than diagnostics.
+      </p>
+
+      <p>
+        It suggests that agent systems need something like a local operational world model. Not a huge one. Not an overbuilt SIEM.
+        Just a structured, trustworthy layer that answers a few fundamental questions well:
+      </p>
+
+      <ul>
+        <li>What is true about this machine right now?</li>
+        <li>What changed recently?</li>
+        <li>What is likely noise versus likely action?</li>
+        <li>Is this a good moment to run something expensive?</li>
+        <li>What context should another agent inherit from this situation?</li>
+      </ul>
+
+      <p>
+        Once you frame it that way, a lot of the implementation details start to matter differently.
+      </p>
+
+      <p>
+        Stable envelopes matter because shared reality has to be legible. Grouped events matter because the agents should not each have to dedupe the same flood.
+        Summary modes matter because situational awareness has to be cheap enough to use often. Recent-changes endpoints matter because a world model without time is too flat.
+      </p>
+
+      <p>
+        That is exactly where UMI has started to evolve.
+      </p>
+
+      <p>
+        The recent work has been less about making a bigger pile of telemetry and more about making the telemetry agent-native:
+        normalized response envelopes, cross-platform field hardening, event summaries, recent-changes views, compact output modes, and a growing bias toward high-signal structured answers.
+      </p>
+
+      <p>
+        This makes the project more useful in a narrow sense. Agents can answer system questions faster and with less glue logic.
+        But it also opens a more interesting path.
+      </p>
+
+      <p>
+        If UMI keeps moving in this direction, it can support behaviors like:
+      </p>
+
+      <ul>
+        <li>load-aware delegation in multi-agent workflows</li>
+        <li>self-regulation when an agent is making the machine worse</li>
+        <li>shared triage across heterogeneous agents</li>
+        <li>handoffs with machine context attached</li>
+        <li>preflight decisions before expensive local tasks</li>
+      </ul>
+
+      <p>
+        That is the part that feels alive to me.
+      </p>
+
+      <p>
+        There is a version of the future where local agents remain oddly disembodied: powerful at tasks, clumsy in environments, always slightly unreal.
+        And there is another version where they become more grounded, more inspectable, more cooperative, and more aware of the systems they inhabit.
+      </p>
+
+      <p>
+        UMI sits squarely in that second direction.
+      </p>
+
+      <p>
+        It is still early. There is still plenty to do: better trend views, stronger recent-change summaries, cleaner classifications, service health, triage bundles,
+        preflight questions, and the many little cross-platform details that make a tool feel trustworthy instead of approximate.
+      </p>
+
+      <p>
+        But the shape is visible now.
+      </p>
+
+      <p>
+        UMI is not just a way for an agent to inspect a machine.
+      </p>
+
+      <p>
+        It is a way for a set of agents to share the same machine reality.
+      </p>
+
+      <p>
+        That feels like infrastructure worth building.
+      </p>
+    </main>
+
+    <footer class="footer">
+      <p>Local Frontier</p>
+      <p>Dispatch 003 · Shared local reality as infrastructure.</p>
+    </footer>
+  </div>
+</body>
+</html>
