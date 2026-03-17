@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f7f1e6"/>
+      <stop offset="100%" stop-color="#efe7d8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="170" cy="120" r="180" fill="#8a4a2f" fill-opacity="0.08"/>
+  <circle cx="1050" cy="120" r="160" fill="#213f3a" fill-opacity="0.08"/>
+  <rect x="72" y="72" width="1056" height="486" rx="28" fill="#fbf7ef" fill-opacity="0.85" stroke="#d6cdbc"/>
+  <text x="110" y="168" fill="#8a4a2f" font-family="'IBM Plex Mono', monospace" font-size="24" letter-spacing="3">FIELD NOTES FROM THE FRONTIER OF AGENT SYSTEMS</text>
+  <text x="110" y="300" fill="#221d17" font-family="Georgia, 'Times New Roman', serif" font-size="88" font-weight="600">Local Frontier</text>
+  <text x="110" y="382" fill="#655d52" font-family="Georgia, 'Times New Roman', serif" font-size="36">Grounded agents. Real machines. Field notes from the edge.</text>
+  <text x="110" y="490" fill="#213f3a" font-family="'IBM Plex Mono', monospace" font-size="24" letter-spacing="2">LOCAL-FIRST AGENTS · MCPS · ORCHESTRATION · OBSERVABILITY</text>
+</svg>

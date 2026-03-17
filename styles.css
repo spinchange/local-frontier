@@ -105,6 +105,7 @@ a {
 }
 
 .hero-text,
+.hero-kicker,
 .reading-block p,
 .card p,
 .thread-card p,
@@ -117,6 +118,12 @@ a {
   max-width: 34rem;
   margin: 0;
   font-size: clamp(1.08rem, 1.8vw, 1.36rem);
+}
+
+.hero-kicker {
+  max-width: 38rem;
+  margin: 0 0 14px;
+  font-size: 1.02rem;
 }
 
 .eyebrow {
@@ -195,6 +202,27 @@ a {
 
 .thread-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.feature-banner {
+  margin-bottom: 18px;
+  padding: 18px 20px;
+  background: linear-gradient(135deg, rgba(33, 63, 58, 0.08), rgba(138, 74, 47, 0.08));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.feature-banner a {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.35rem;
+}
+
+.feature-banner p:last-child {
+  margin: 0;
+  color: var(--muted);
 }
 
 .card h2,

@@ -26,5 +26,9 @@ This is a lightweight static scaffold for a publication and workshop focused on 
 
 1. Add the second and third posts.
 2. Decide on the live domain.
-3. Add a favicon and social preview image.
+3. Optionally render `assets/og-card.svg` to PNG later for broader social crawler compatibility.
 4. Deploy to a simple static host.
+
+## Custom Domain Prep
+
+When you choose the domain, add a `CNAME` file at the repo root containing the final hostname.
